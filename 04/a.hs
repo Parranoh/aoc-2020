@@ -1,8 +1,7 @@
 main = interact $ output . map isValidPass . splitIntoPass
 
 splitIntoPass :: String -> [String]
-splitIntoPass "" = []
-splitIntoPass s  = go "" s
+splitIntoPass = go ""
     where
         go :: String -> String -> [String]
         go p "" = [reverse p]
