@@ -1,6 +1,3 @@
-import Data.List (nub)
-import Control.Monad (guard)
-
 main = interact $ output . map solve . splitIntoParagraphs
 
 splitIntoParagraphs :: String -> [String]
