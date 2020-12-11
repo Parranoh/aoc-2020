@@ -12,7 +12,7 @@ data Instruction
 
 type Program = IA.Array Int Instruction
 
-main = interact $ show . catMaybes . map run . fixes . readProgram
+main = interact $ show . head . catMaybes . map run . fixes . readProgram
 
 readProgram :: String -> Program
 readProgram = (\is -> IA.listArray (1,length is) is) . map readInstruction . lines
