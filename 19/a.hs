@@ -2,7 +2,6 @@ import qualified Data.Array.ST as MA
 import qualified Control.Monad.ST as ST
 import qualified Data.STRef as STR
 import Control.Monad (forM_,when)
-flap ff x = (\f -> f x) <$> ff
 splitOn x xs = go xs []
     where
         go [] acc = [reverse acc]
